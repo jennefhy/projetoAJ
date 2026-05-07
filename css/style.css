@@ -1,64 +1,69 @@
-body{
+/* Configurações Gerais */
+body {
     margin: 0;
     padding: 0;
     background-color: rgb(23, 9, 58);
-    
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 
-#login .container #login-row #login-column #login-box{
-    margin-top: 50px;
+/* Estilização das Caixas (Login e Registro) */
+#login-box, #register-box {
+    margin: 50px auto; /* Centraliza horizontalmente */
     max-width: 600px;
-    height: 300px;
+    min-height: 320px; /* Use min-height em vez de height fixo */
     border: 1px solid #9C9C9C;
     background-color: #EAEAEA;
-}
-
-#login .container #login-row #login-column #login-box #login-form{
+    border-radius: 8px; /* Bordas levemente arredondadas para um ar moderno */
     padding: 20px;
-    margin-top: 30px;
+    box-shadow: 0px 10px 25px rgba(0,0,0,0.3);
 }
 
-
-
-
-#register .container #register-row #register-column #register-box{
-    margin-top: 50px;
-    max-width: 600px;
-    height: 400px;
-    border: 1px solid #9C9C9C;
-    background-color: #EAEAEA;
+#register-box {
+    min-height: 420px;
 }
 
-#register .container #register-row #register-column #register-box #register-form{
-    padding: 20px;
-    margin-top: 30px;
+/* Formulários */
+#login-form, #register-form {
+    margin-top: 10px;
 }
 
-.form-control:focus{
+/* Customização dos Inputs (Foco) */
+.form-control:focus {
     box-shadow: none;
     border-color: #ba68c8;
 }
 
-.profile-button{
+/* Botões do Perfil (Roxo) */
+.profile-button {
     box-shadow: none;
     border: none;
     background: #ba68c8;
+    color: white;
+    transition: background 0.3s ease;
 }
 
-.profile-button:hover{
+.profile-button:hover, 
+.profile-button:focus, 
+.profile-button:active {
     background: #682773;
-}
-
-.profile-button:focus{
-    background: #682773;
+    color: white;
     box-shadow: none;
+    outline: none;
 }
 
-.profile-button:active{
-    background: #682773;
-    box-shadow: none;
-}
-
-.labels{
+/* Labels menores para o formulário de Perfil */
+.labels {
     font-size: 11px;
+    font-weight: bold;
+    text-transform: uppercase;
+    color: #555;
+}
+
+/* Ajuste para os cards na página de tarefas */
+.card {
+    transition: transform 0.2s;
+}
+
+.card:hover {
+    transform: scale(1.02); /* Efeito suave ao passar o mouse */
 }

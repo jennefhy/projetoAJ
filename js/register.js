@@ -1,7 +1,8 @@
 const Sequelize = require('sequelize');
-const database = require("./db");
+const database = require('./db');
 
-const Register = database.define('register', {
+// 1. CONFIRA ESTE NOME AQUI (deve ser Register com 'R' maiúsculo)
+const Register = database.define('register', { 
     id: {
         type: Sequelize.INTEGER,
         autoIncrement: true,
@@ -24,6 +25,7 @@ const Register = database.define('register', {
         type: Sequelize.STRING,
         allowNull: false
     }
-})
+});
 
+// 2. O NOME AQUI DEVE SER IGUAL AO LÁ DE CIMA
 module.exports = Register;
